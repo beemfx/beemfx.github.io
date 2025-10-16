@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Resource Management 2"
+date: 2011-05-28 16:27:00 +0000
+---
+So I re-implemented the resource managers for game assets. Specifically for meshes, skeletons, and skins. I decided to handle the resource management internally within the specific classes for each resource type. Now each type of resource is created and deleted using static member methods, and the constructors and destructors have been made private (to insure that only the static methods can be used to create the resources). The resource manager itself is a static member, and at the start of the game the resource manager must be created, which is also accomplished using a static member method. So, for example, the mesh resource manager is initialized by calling CMeshEG::InitMgr(), and is shutdown by calling CMeshEG::ShutdownMgr(). In between these to calls a new mesh can be creating using code similar to the following: CMeshEG* pMesh = CMeshEG::Create("mesh.emesh"). It would then be deleted by CMeshEG::Delete(pMesh).
+
+The Create method implements the resource manager, and so if a duplicate resource is created it returns the reference to the original resource, rather than creating a new one. A reference counter is incremented when a duplicate resource is loaded. And the Delete method reduces the reference counter, actually deleting the resource when the reference counter reaches zero. Additionally, when ShutdownMgr() is called all resources within that manager are deleted and a warning is sent to the console of any resources that were never properly deleted, thus the programmer may locate any problems they may have had with not properly deleting resources.
+
+Similar systems have been implemented for Skins and Skeletons. This is a much cleaner way of handling resource management than I had done previously. As it doesn't rely heavily on additional classes (well, it sort of does, but all the additional classes are internal private sub classes, so the programmer never even has to look at them).

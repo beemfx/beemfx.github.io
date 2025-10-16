@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Tech Demo 1"
+date: 2011-03-23 15:58:00 +0000
+---
+I mentioned in the introduction to this blog that the Emergence Game Engine has already come a long way from the groundwork foundation. To give readers an idea of where the game is at now, I'm presenting the first tech demo.
+
+This demo will show a glimpse of the animation system, AI scripting, pixel shaders (though the best effects are not seen in this demo), and the lighting scheme.
+
+This is a basic game demonstration, and is meant to show that the game is currently a working engine. That is, it is far more than a rasterizer which draws a few triangles on the screen. Later posts will get into more specific details on how this engine works.
+
+As an aside, you'll have to forgive the boring texture design and "ugly" actors and objects. This demo features "programmer art". Also, the levels in this demo are designed to test certain underlying features of the game engine, and not necessarily represent actual gameplay .
+
+https://www.youtube.com/watch?v=1ABVjBiKwyw

@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Tech Demo 2"
+date: 2011-06-25 21:54:00 +0000
+---
+The second tech demo was actually released a few weeks ago, but I'm now posting it into the blog. Check it out.
+
+https://www.youtube.com/watch?v=NRaFlXoW8JU

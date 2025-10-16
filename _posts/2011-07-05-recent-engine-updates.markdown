@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Recent Engine Updates"
+date: 2011-07-05 20:39:00 +0000
+---
+Quite a bit more progress has been made on the game engine since the last blog update. I modified the map format a little, because I had seriously modified the way the engine handled materials, the map format now treats materials the same way as the rest of the engine. Previously, the map format specified dark maps and textures in separate tags, they are now in the same tag. This would seemingly cause the problem that duplicate textures would be loaded because a given dark map might be rendered with more than one texture, and vice versa. However, because of the way the game manages resources this is in fact not a problem at all.
+
+I also fixed a problem with the map exporter where it was exporting regions that didn't actually have anything in them. This corrected some problems I had with the game not actually knowing where a given entity was located (a problem that didn't show up a lot, but on occasion).
+
+I've also implemented cube maps into the game, something that I had tinkered with a bit, but now they are officially supported. Using them vastly improved the appearance of the water pixel shader that has been seen in previous posts. It now has a shiny, reflective appearance. I had played briefly with rendering cube maps in real time by using render targets in order to create a reflection effect, but for now I have abandoned that idea.
+
+In other news I have also been experimenting with real time shadows using shadow volumes. Something that seems quite effective, though these require models to be formed in a specific way, something which I, being that I am not an artist, have not done with most of the models I created for the game. For that reason I will be experimenting with a few other ideas for real time shadows and see how they perform.
+
+I've also been working on the "windows system" for the game's UI. I've added a new global function that can post a message to the overlay window and that message will appear on the screen for a few seconds then fade away. This was especially helpful when saving a game, you see, previously when you pressed the quick save button there was absolutely no indication that the game had been saved (unless you opened the console), now the overlay displays a message that the game has been saved. Of course, other messages can be displayed as well. This did involve modifying the font class a little in order to allow alpha blending. Previously, the font would only use the alpha value of the texture that contained the font. The alpha value was used to distinguish each letter (the actually font texture is all white so that it may be colored by the vertex color) and for anti-aliasing around the edges of each letter. I discovered that it is possible to use both the texture alpha value and the vertex alpha value to achieve the desired effect.
