@@ -13,4 +13,4 @@ These are some things that the developers at Beem Software find interesting.
 
 ### Archives
 
-The following is some old websites that Beem Media has maintained through time: <a href="http://fun.beemsoft.net/" target="_blank" rel="noreferrer noopener">fun.beemsoft.net</a>.
+The following is some old websites that Beem Media has maintained through time: [fun.beemsoft.net](http://fun.beemsoft.net/).
