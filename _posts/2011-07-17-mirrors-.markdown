@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Mirrors!"
+date: 2011-07-17 04:06:00 +0000
+---
+Wow, two posts in one day, but I couldn't help myself. I was going to stop coding for the day to play some video games, but I started reading about stencil buffers, and I couldn't help but experiment with creating a reflection effect. I'd experimented with reflections before by rendering to a cube map in real time, which basically created those ugly mirrors that you see in a lot of games (most recently I saw them in Duke Nukem Forever). Because I'd done that I'd already had code to render the scene from any angle, but I needed something that looked sharper than the cube texture. So I learned how to use the stencil buffer to create a reflection effect. Check it out.
+
+![Image](/assets/m/i/mirrors.JPG)
+
+Currently the single mirror seen in the above screenshot is hard coded, so all that is left is to devise a method for signifying that a mirror is present in the game assets. Because of the way I've implement the mirror code, it is certainly possible to create a mirror that can move around in real time, but I would also like the ability to have static geometry become a mirror.
+Mirrors are done in a typical full scene reflection method. A stencil buffer masks out where the mirror is to be rendered, a reflection is rendered in the stencil, the mirror is then rendered (in the case above the mirror has a simple red shade to distinguish it, but it could be any transparent, and even lit, texture), finally the scene is rendered from the camera perspective. So technically it is four passes to render a reflection, but only two of those are computationally expensive. The effect is much sharper than the render-to-texture method that has been seen in so many games.

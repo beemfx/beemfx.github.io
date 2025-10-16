@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Progress"
+date: 2009-07-08 18:02:00 +0000
+---
+<pre>Quite a bit more progress on the Emergence engine, PhysX
+materials have been implemented, the map doesn't have materials yet, but
+that won't be that big of a deal. Skyboxes have also been implemented, at
+least to some degree though certainly not final. The AI systems has been
+significantly advanced. I have decided to create an AI system that will work
+with both Lua scripts and an external dll file, that way really simple items
+that don't require much processing power can be run with Lua scripts, and
+heavy AI objects can be processed with machine instructions, which will be much
+faster. I'm thinking simple items like doors or simple entities (that only
+need to play sounds, or other small matters) can be run by Lua scripts while
+complex AIs that follow graphs and do other intelligent things can be run by
+machine code. The AI system, however, will be developed so that Lua scripts
+can do everything that machine code can do, only slower.</pre>

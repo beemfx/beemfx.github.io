@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Log"
+date: 2011-05-11 18:22:00 +0000
+---
+<pre>Major changes were made to how AI works. It used to be that there was a list of
+simple entities which didn't process AI at all, and a list of AI controlled entities. Now there are
+three different lists, inactive AIs (which replaces simple AIs), active AIs, and
+semi-active AIs. Each entity's AI script controls which list it will appear in
+and the list can change at any time the AI decides it wants to. This makes
+managing AI more efficient, because now an AI can be active when it needs to be
+then go inactive when it is no longer doing anything. For example, a door is
+usually inactive, but if it get's "activated" the AI goes live, moves the door
+open, when the door is fully open the AI goes inactive until it is "activated" again. That way
+an AI isn't constantly being updated if it isn't doing anything. Semi-active
+AIs are similar to active ones, but they are updated less frequently. Many
+NPC objects can be controlled in this semi-active way because they really only need to set
+a velocity or animation, and update it only occasionally not necessarily every frame.
+
+The main thing though, is that an AI can go inactive, so processing power isn't
+wasted on an entity if it isn't needed. Most of this work was done solely for the
+purpose of putting doors in the game engine, and happily it seems to be working
+quite well. Doors involve one entity interacting with another. To do this, one entity can send a notification to another entity. It was necessary to implement this functionality. Currently this functionality needs a little more work, as when one entity notifies another one
+the entity notified may not know exactly where the entity that notified it was
+it might be a good idea to implement a mechanism to do so, that way, for example
+the door would swing in the right direction when notified. Or if the player
+wanted to initiate a dialog with an NPC the NPC would know which direction to
+face or look. I'm thinking the best way to do this, would be to created an
+additional AI controller method which lets an AI get a handle for another
+entity's controller interface, that way it could either issue commands to the
+entity, or it could get information about that entities position and so forth.
+
+Doing things this way could offer a lot of potential. For example, you could
+define a power up, but rather than the entity obtaining the power up deciding
+what to do with the power up, the power-up itself could direct the entity that
+obtained it as to what to do. Yes, indeed, this seems like a good way to go.
+
+On an interesting note it is two years to the day that the Emergence Engine
+began.</pre>

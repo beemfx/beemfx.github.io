@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Tech Demo 3"
+date: 2013-01-03 02:16:00 +0000
+---
+This showcases a few, but not all, new features. Including menu flow. Being that I haven't done any menu flow in a home-made game since Huckleberry's Adventure. This was pretty big for me.
+
+https://www.youtube.com/watch?v=bBPNw_owqkQ
+
+[video:youtube:bBPNw_owqkQ]

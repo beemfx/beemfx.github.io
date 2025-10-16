@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Shadows"
+date: 2011-07-29 21:49:00 +0000
+---
+One of the most difficult things to implement in a game engine is shadows. A shadow itself isn't difficult to implement. The difficult part is getting shadows to work with the game engine itself. Important questions are how do you decide which direction a shadow get's cast, what happens as an entity moves through different light sources, how do you determine shadow visibility.
+
+I have just implemented volumetric shadows in my game engine. This is a process of creating a "shadow volume" and then everything inside that volume gets darkened by the shadow. This technique requires that any mesh that is to cast a shadow, but be a closed mesh, which basically means you can fill the mesh up with water, and it won't spill out. Most of the meshes I developed appeared to be closed, but they had little leaks, and so when I first tried to implement shadows I ran into all sorts of problems. I knew exactly why the problems appeared, but I didn't want to deal with modifying the meshes since I'm not an artist.
+
+I ultimately decided to modify the entity definition file format with a new tag &lt;shadow&gt;. This new tags allows for a special mesh to be specified, the shadow mesh, then the entity will cast a shadow of the shadow mesh. Ideally the shadow mesh should resembled the actual mesh, because this is the mesh that will be used to cast the shadow. In that way a separate, fully closed mesh, can be specified as a shadow. This mesh can be simpler than the original, but it should have the same bone structure so that it can be animated properly.
+
+With this new shadow mesh, I was able to cast shadows without problems. However, that's where I ran into the more important question of, what direction should a shadow be cast? I kind of figured that since I was using a "four closest lights" lighting model for lighting a mesh, that I could used the same data from that to decide which direction the shadow should be cast. The first thing I experimented with, was using the closest light to cast a shadow. This of course had the problem of a shadow suddenly jumping around when the closest light changed.
+
+I realized I needed to do something akin to what I was doing with lighting, and blend the closest lights all together. To create one faux light source, and cast the shadow from there. This was accomplished by averaging out each light source according to the same value used for the intensity of the light in the lighting calculation. This seemed to work out okay, and prevented the shadow from jumping around, except when then entity completely walked out of any light sources, then the shadow would still be cast, but in a direction that wasn't important. This was just as bad as the shadow jumping around.
+
+I finally decided that for the shadows to look more natural, I would need to change the darkness of the shadow depending on the overall intensity of the light. That way if an entity was far away from a light source, the shadow would be dim, and if it was out of range it wouldn't even cast a shadow. This required some reworking as to how I was rendering shadows, as each shadow could now have it's own intensity. Ultimately everything work out, and it looks fairly natural.
+
+Obviously, shadows don't get less intense in real life, but consider real life. If a single light source is blocked off, a sharp shadow is cast, but then as you move further away from the light source, the shadow does appear to get lighter, this is because there is more light to bounce around the various reflective surfaces in an environment, so ultimately the fading shadow method isn't too unbelievable.
+
+![Image](/assets/s/h/shadow1.JPG)
+
+![Image](/assets/s/h/shadow2.JPG)
+
+[caption id="" align="aligncenter" width="412"]![Image](/assets/s/h/shadow_mesh.JPG) You might notice that the above shadows don't really look like shadows of the "Hell Trooper", it's because they're not, they're shadows of this guy. He's the "shadow mesh". In a production game you'd want a more accurate representation.[/caption]

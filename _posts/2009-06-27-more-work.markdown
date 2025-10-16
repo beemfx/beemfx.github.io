@@ -1,0 +1,12 @@
+---
+layout: post
+title: "More Work"
+date: 2009-06-27 17:58:00 +0000
+---
+<pre>Quite a bit more work on the game, some code revisions, and
+further development of the NET code. But the biggest thing is that the
+server now runs on a separate thread, so the game can take advantage of
+multi-core CPUs. Indeed, the performance boost was amazing. Also, of note,
+the Legacy map format has almost been eliminated from Emergence, the emap
+format has been established, and the plugin for 3D World Studio written, but
+it has not been implemented yet.</pre>
