@@ -22,7 +22,7 @@ Blaine had been obsessed with Might and Magic from a very young age, and he had 
 
 In 1999 Blaine acquired his first computer. No longer relegated to sharing a computer with his family, his software engineering skills progressed full throttle. He switched from using QBasic to C. His first game, Castle, was endlessly iterated upon as he learned new technologies. After learning C++, the [ScrollGIN](https://github.com/beemfx/ScrollGIN) Engine began development and the Joe's Copter 2 demo was ported to it. He also began learning 3D technologies since that seemed to be the future of gaming.
 
-EXPLOR went through a lot of iterations during this time, with two QBasic beta version being released, as well as a third C++ version.
+EXPLOR went through a lot of iterations during this time, with two QBasic beta versions being released, as well as a third C++ version.
 
 ## Tech Development Years
 From 2006 to 2008 Beem's first 3D engine was developed, the [Legacy 3D Engine](https://github.com/beemfx/Beem.Media/tree/master/games/Legacy-Engine).
