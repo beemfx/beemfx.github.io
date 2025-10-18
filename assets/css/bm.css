@@ -241,3 +241,21 @@ h1, h2, h3, h4, h5, h6 {
 .bm-content-area ul li {
 	list-style-type: none;
 }
+
+.bm-window footer {
+	color: white;
+	background-color: #808080;
+	margin: 0;
+	padding: .2em 1em;
+	font-size: 75%;
+}
+
+.bm-window footer a {
+	color: white;
+	background-color: #808080;
+	text-decoration: none;
+}
+
+.bm-window footer a:hover {
+	text-decoration: underline;
+}
