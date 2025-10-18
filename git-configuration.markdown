@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Git Configuration"
-permalink: /git-configuration/
+permalink: /git-configuration
 ---
 {% highlight bash %}
 [user]

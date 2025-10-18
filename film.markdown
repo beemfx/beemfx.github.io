@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Film"
-permalink: /film/
+permalink: /film
 ---
 ### YouTube
 * [Jack Everett](https://www.youtube.com/channel/UCGNK7Wp9kZX7z4j1ocQTNHA) - Defunct

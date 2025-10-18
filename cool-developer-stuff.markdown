@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cool Developer Stuff"
-permalink: /cool-developer-stuff/
+permalink: /cool-developer-stuff
 ---
 These are some things that the developers at Beem Software find interesting.
 
@@ -13,4 +13,4 @@ These are some things that the developers at Beem Software find interesting.
 
 ### Archives
 
-The following is some old websites that Beem Media has maintained through time: [fun.beemsoft.net](http://fun.beemsoft.net/).
+The following is some old websites that Beem Media has maintained through time: [fun.beemsoft.com](https://fun.beemsoft.com).

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Clever Code"
-permalink: /clever-code/
+permalink: /clever-code
 ---
 ## countof operator
 
