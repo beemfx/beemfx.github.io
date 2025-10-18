@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
 {%- include head.html -%}
+
 <body>
-{%- include header.html -%}
-<div class="bm-main-container">
-<div class="bm-window">
-<h1><img src="/assets/layout/smallfolder.gif"/>{{ page.title }}</h1>
-<div class="bm-window-body">
-<div class="bm-sidebar">
-<div class="bm-folder-img" ></div>
-<br/>
-<h2>{{ page.title }}</h2>
-<div class="bm-color-line"></div>
-<p>{{ page.description }}</p>
-{% include nav.html %}
-</div>
-<div class="bm-content-area">
-<div class="bm-content-area-inner">
-{{ content }}
-</div>
-</div>
-</div>
-</div>
-</div>
+    {%- include header.html -%}
+    <div class="bm-main-container">
+        <div class="bm-window">
+            <h1><img src="/assets/layout/smallfolder.gif" />{{ page.title }}</h1>
+            <div class="bm-window-body">
+                <div class="bm-sidebar">
+                    <div class="bm-folder-img"></div>
+                    <br />
+                    <h2>{{ page.title }}</h2>
+                    <div class="bm-color-line"></div>
+                    <p>{{ page.description }}</p>
+                    {% include nav.html %}
+                </div>
+                <div class="bm-content-area">
+                    <div class="bm-content-area-inner">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            {%- include footer.html -%}
+        </div>
+    </div>
 </body>
+
 </html>
