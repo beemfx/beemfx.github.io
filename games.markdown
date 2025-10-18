@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Games"
-permalink: /games/
+permalink: /games
 ---
 ### In Development
 * RPG Game - Unnanounced RPG game.

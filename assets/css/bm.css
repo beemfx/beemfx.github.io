@@ -79,6 +79,31 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 1em;
 }
 
+.bm-sidebar nav {
+	border: 0px solid black;
+}
+.bm-sidebar nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.bm-sidebar nav ul li {
+	background-image: url(/assets/layout/smallfolder.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding: 0 20px;
+}
+
+.bm-sidebar nav ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+.bm-sidebar nav ul li a:hover {
+	text-decoration: underline;
+}
+
 .bm-sidebar h2 {
 	font-size: 150%;
 }

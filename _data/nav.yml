@@ -1,0 +1,18 @@
+- name: Home
+  link: /
+- name: History
+  link: /history
+- name: Games
+  link: /games
+- name: Film
+  link: /film
+- name: Websites
+  link: /websites
+- name: Cool Developer Stuff
+  link: /cool-developer-stuff
+- name: Developer Blog
+  link: /posts
+- name: About
+  link: /about
+- name: Privacy Policy
+  link: /privacy-policy

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Posts"
-permalink: /posts/
+permalink: /posts
 ---
 <div class="home">
   {% if site.paginate %}

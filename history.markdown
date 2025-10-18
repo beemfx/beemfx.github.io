@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "History"
-permalink: /history/
+permalink: /history
 ---
 ## The History of Beem Media
 
