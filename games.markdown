@@ -9,7 +9,7 @@ permalink: /games
 <div class="bm-game-list-item">
 <h2>
 {% if item.link %}
-<a href="{{ item.link }}">
+<a href="{{ item.link | relative_url }}">
 {% endif %}
 <div class="bm-app-img"></div> {{ item.name }}
 {% if item.link %}

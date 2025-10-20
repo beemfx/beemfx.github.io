@@ -1,10 +1,10 @@
 - name: "Castle: A Text Based Adventure"
   date: 1997
-  link: castle
+  link: games/castle
   desc: The first game developed by Beem Media.
 - name: Bomb
   date: 1998
-  link: bomb
+  link: games/bomb
   desc: The first game with graphics developed by Beem Media.
 - name: "Archer: Deluxe"
   date: 1998
