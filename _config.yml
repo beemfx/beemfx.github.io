@@ -22,8 +22,8 @@ title: Beem Media Home Page
 email: beemmedia@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   The home page for Beem Media.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: beemfx
 

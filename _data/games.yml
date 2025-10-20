@@ -15,7 +15,7 @@
 - name: Huckleberry's Adventure
   date: January 18, 2000
 - name: "Joe's Copter II: The Revenge"
-  date: April 3, 2002
+  date: "Demo: April 3, 2002"
 - name: "DUMB Infernal"
   date: Mar 21, 2020
   link: "https://store.steampowered.com/app/1208370/DUMB_Infernal/"
@@ -24,8 +24,11 @@
   link: "https://store.steampowered.com/app/1387120/EXPLOR_A_New_World/"
 - name: Cat-Ninja
   date: TBA
+  status: development
 - name: Unnanounced RPG Game
   date: TBA
+  status: development
 - name: Sometimes Y
   date: Canceled
   link: "https://github.com/beemfx/Beem.Media/tree/master/games/Sometimes-Y"
+  status: canceled
